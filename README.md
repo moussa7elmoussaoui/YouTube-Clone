@@ -20,22 +20,6 @@ A responsive clone of the YouTube homepage built with **HTML5**, **CSS3**, and *
 * CSS3 (Flexbox, custom properties, pseudo-elements)
 * JavaScript (ES6 Modules)
 
-## Project Structure
-
-```text
-.
-├── index.html
-├── main.js
-├── styles.css
-├── data/
-│   └── previews.js
-├── icons/
-│   ├── channels/
-│   ├── header/
-│   └── sidebar/
-└── thumbnails/
-```
-
 ## Getting Started
 
 1. Clone the repository:
