@@ -41,7 +41,7 @@ A responsive clone of the YouTube homepage built with **HTML5**, **CSS3**, and *
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/youtube-clone.git
+git clone https://github.com/moussa7elmoussaoui/youtube-clone.git
 ```
 
 2. Open the project folder.
