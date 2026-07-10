@@ -71,7 +71,6 @@ header {
 .search button {
   &::after {
     position: absolute;
-    bottom: -50px;
     content: '';
     opacity: 0;
     padding: 8px;
@@ -101,6 +100,7 @@ header {
   }
   &::after {
     content: 'Search';
+    bottom: -42.5px;
     right: 5px;
     left: 5px;
   }
@@ -118,6 +118,7 @@ header {
   cursor: pointer;
   &::after {
     content: 'Search with your voice';
+    bottom: -42px;
   }
 }
 
