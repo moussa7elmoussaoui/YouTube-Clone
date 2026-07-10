@@ -48,14 +48,15 @@ header {
   display: flex;
   align-items: center;
   flex: 1;
-  margin-right: 8px;
   border-radius: 2px;
+  margin-left: 60px;
 }
 
 .search input {
   flex: 1;
   height: 40px;
   min-width: 0;
+  width: 0;
   font-size: var(--font-lg);
   padding-left: 12px;
   border: 1px solid rgb(204, 204, 204);
@@ -206,4 +207,41 @@ header {
   position: fixed;
   inset: 0 auto 0 0;
   background-color: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  button {
+    background-color: transparent;
+    width: 100%;
+    border: 0;
+  }
+  button:not(:first-child) {
+    height: 74px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.15s;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(239, 239, 239);
+    }
+    span {
+      font-size: var(--font-xs);
+      white-space: nowrap;
+      margin-top: 6px;
+    }
+  }
+  img {
+    height: 24px;
+    aspect-ratio: 1;
+  }
+}
+
+.sidebar button.hamburger-menu {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
