@@ -1,0 +1,71 @@
+@import "./variables.css";
+@import "./scrollbar.css";
+@import "./header.css";
+@import "./sidebar.css";
+@import "./video-grid.css";
+
+* {
+  box-sizing: border-box;
+  color: var(--color-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  user-select: none;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: "Roboto", Arial, sans-serif;
+  color: var(--color-primary);
+  overflow: auto;
+  margin: 0;
+}
+
+@media (max-width: 980px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+    padding-left: var(--video-grid-padding);
+  }
+
+  header {
+    gap: 2rem;
+  }
+
+  div:is(.upload, .youtube-apps) {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    gap: 1rem;
+  }
+
+  header .youtube-logo,
+  div.notifications {
+    display: none;
+  }
+
+  .sidebar-container > nav {
+    --expanded-sidebar-width: max(240px, 82vw);
+  }
+}

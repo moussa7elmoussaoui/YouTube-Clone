@@ -7,67 +7,189 @@
       content="width=device-width, initial-scale=1.0"
     >
     <title>Youtube Clone</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/assets/icons/youtube.ico">
+    <link rel="stylesheet" href="assets/styles/main.css">
     <script  type="module" src="main.js"></script>
   </head>
   <body>
     <header>
-      <img class="youtube-logo" src="assets/icons/header/youtube-logo.svg">
+      <div class="menu">
+        <button class="hamburger-menu">
+          <img src="assets/icons/sidebar/hamburger-menu.svg" draggable="false" data-icon>
+        </button>
+        <img class="youtube-logo" src="assets/icons/header/youtube-logo.svg" draggable="false">
+      </div>
       <div class="search">
         <input type="text" placeholder="Search">
         <button>
-          <img src="assets/icons/header/search.svg">
+          <img src="assets/icons/header/search.svg" draggable="false" data-icon>
         </button>
         <button class="voice-search">
-          <img src="assets/icons/header/voice-search-icon.svg">
+          <img src="assets/icons/header/voice-search-icon.svg" draggable="false" data-icon>
         </button>
       </div>
       <div class="actions">
         <div class="upload">
-          <img src="assets/icons/header/upload.svg">
+          <img src="assets/icons/header/upload.svg" draggable="false" data-icon>
         </div>
         <div class="youtube-apps">
-          <img src="assets/icons/header/youtube-apps.svg">
+          <img src="assets/icons/header/youtube-apps.svg" draggable="false" data-icon>
         </div>
         <div class="notifications">
-          <img src="assets/icons/header/notifications.svg">
+          <img src="assets/icons/header/notifications.svg" draggable="false" data-icon>
           <div class="counter">3</div>
         </div>
         <div class="my-channel">
-          <img src="assets/images/channels/my-channel.jpg">
+          <img src="assets/images/channels/my-channel.jpg" draggable="false">
         </div>
       </div>
     </header>
     <nav class="sidebar">
       <button class="hamburger-menu">
-        <img src="assets/icons/sidebar/hamburger-menu.svg">
+        <img src="assets/icons/sidebar/hamburger-menu.svg" draggable="false" data-icon>
       </button>
       <button class="home">
-        <img src="assets/icons/sidebar/home.svg">
+        <img src="assets/icons/sidebar/home.svg" draggable="false" data-icon>
         <span>Home</span>
       </button>
       <button class="explore">
-        <img src="assets/icons/sidebar/explore.svg">
+        <img src="assets/icons/sidebar/explore.svg" draggable="false" data-icon>
         <span>Explore</span>
       </button>
       <button class="subscriptions">
-        <img src="assets/icons/sidebar/subscriptions.svg">
+        <img src="assets/icons/sidebar/subscriptions.svg" draggable="false" data-icon>
         <span>Subscriptions</span>
       </button>
       <button class="originals">
-        <img src="assets/icons/sidebar/originals.svg">
+        <img src="assets/icons/sidebar/originals.svg" draggable="false" data-icon>
         <span>Originals</span>
       </button>
       <button class="youtube-music">
-        <img src="assets/icons/sidebar/youtube-music.svg">
+        <img src="assets/icons/sidebar/youtube-music.svg" draggable="false" data-icon>
         <span>Youtube Music</span>
       </button>
       <button class="library">
-        <img src="assets/icons/sidebar/library.svg">
+        <img src="assets/icons/sidebar/library.svg" draggable="false" data-icon>
         <span>Library</span>
       </button>
     </nav>
-    <main>
+    <div class="sidebar-container">
+      <div class="sidebar-overlay"></div>
+      <nav>
+        <div class="menu">
+          <button class="hamburger-menu">
+            <img src="assets/icons/sidebar/hamburger-menu.svg" draggable="false" data-icon>
+          </button>
+          <img class="youtube-logo" src="assets/icons/header/youtube-logo.svg" draggable="false">
+        </div>
+        <div class="sidebar-content hidden-scrollbar-thumb">
+          <div class="sidebar-section navigation">
+            <button data-index="0">
+              <img src="assets/icons/sidebar/home.svg" draggable="false" data-icon>
+              <span>Home</span>
+            </button>
+            <button data-index="1">
+              <img src="assets/icons/sidebar/explore.svg" draggable="false" data-icon>
+              <span>Explore</span>
+            </button>
+            <button data-index="2">
+              <img src="assets/icons/sidebar/subscriptions.svg" draggable="false" data-icon>
+              <span>Subscriptions</span>
+            </button>
+            <button data-index="3">
+              <img src="assets/icons/sidebar/originals.svg" draggable="false" data-icon>
+              <span>Originals</span>
+            </button>
+            <button data-index="4">
+              <img src="assets/icons/sidebar/youtube-music.svg" draggable="false" data-icon>
+              <span>Youtube Music</span>
+            </button>
+            <button data-index="5">
+              <img src="assets/icons/sidebar/library.svg" draggable="false" data-icon>
+              <span>Library</span>
+            </button>
+          </div>
+          <div class="sidebar-section subscriptions-section">
+            <button data-sidebar-title>
+              <span>
+                Subscriptions
+              </span>
+              <img src="assets/icons/sidebar/chevron-right.svg" draggable="false" data-icon>
+            </button>
+            <!--subscriptions-->
+            <button data-show="more">
+              <img src="assets/icons/sidebar/chevron-down.svg" draggable="false" data-icon>
+              <span>Show more</span>
+            </button>
+          </div>
+          <div class="sidebar-section you">
+            <button data-sidebar-title>
+              <span>
+                You
+              </span>
+              <img src="assets/icons/sidebar/chevron-right.svg" draggable="false" data-icon>
+            </button>
+            <button>
+              <img src="assets/icons/sidebar/your-channel.svg" draggable="false" data-icon>
+              <span>Your channel</span>
+            </button>
+            <button>
+              <img src="assets/icons/sidebar/history.svg" draggable="false" data-icon>
+              <span>History</span>
+            </button>
+            <button>
+              <img src="assets/icons/sidebar/playlists.svg" draggable="false" data-icon>
+              <span>Playlists</span>
+            </button>
+            <button>
+              <img src="assets/icons/sidebar/watch-later.svg" draggable="false" data-icon>
+              <span>Watch later</span>
+            </button>
+            <button>
+              <img src="assets/icons/sidebar/liked-videos.svg" draggable="false" data-icon>
+              <span>Liked videos</span>
+            </button>
+            <button>
+              <img src="assets/icons/sidebar/downloads.svg" draggable="false" data-icon>
+              <span>Downloads</span>
+            </button>
+          </div>
+          <div class="sidebar-section">
+            <h3>Explore</h3>
+            <button>
+              <img src="assets/icons/sidebar/music.svg" draggable="false" data-icon>
+              <span>Music</span>
+            </button>
+            <button>
+              <img src="assets/icons/sidebar/gaming.svg" draggable="false" data-icon>
+              <span>Gaming</span>
+            </button>
+            <button>
+              <img src="assets/icons/sidebar/sports.svg" draggable="false" data-icon>
+              <span>Sports</span>
+            </button>
+          </div>
+          <div class="sidebar-section">
+            <h3>More from YouTube</h3>
+            <button>
+              <img src="assets/icons/sidebar/youtube.svg" draggable="false">
+              <span>YouTube Premium</span>
+            </button>
+            <button>
+              <img src="assets/icons/sidebar/youtube-kids.svg" draggable="false">
+              <span>YouTube Kids</span>
+            </button>
+          </div>
+          <div class="sidebar-section">
+            <button>
+              <img src="assets/icons/sidebar/report-history.svg" draggable="false" data-icon>
+              <span>Report history</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <main class="video-grid">
       <!--Previews-->
     </main>
   </body>
