@@ -74,7 +74,7 @@
   p {
     margin: 0;
     font-size: var(--font-sm);
-    color: rgb(96, 96, 96);
+    color: var(--color-secondary);
     line-height: 1;
     margin-bottom: 6px;
   }

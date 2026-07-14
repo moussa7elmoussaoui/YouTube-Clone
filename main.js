@@ -85,4 +85,20 @@ sidebarContent.addEventListener('mouseleave', e => {
   sidebarContent.classList.add('hidden-scrollbar-thumb');
 });
 
+const YTlogos = document.querySelectorAll('[src*="youtube-logo"]');
+const mediaQuery = matchMedia('(prefers-color-scheme: dark)');
 
+function updateYTlogos(isDark) {
+  if (isDark) {
+    YTlogos.forEach(img => img.src = 'assets/icons/header/youtube-logo-dark.svg');
+  }
+  else {
+    YTlogos.forEach(img => img.src = 'assets/icons/header/youtube-logo.svg');
+  }
+}
+
+mediaQuery.addEventListener('change', e => {
+  updateYTlogos(e.matches);
+});
+
+updateYTlogos(mediaQuery.matches);

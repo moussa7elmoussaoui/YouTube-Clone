@@ -22,7 +22,7 @@ function createSubscriptionsItem(subscriptionsTitle, link, position) {
 export function updateSubscriptionsSection() {
   const subscriptionsSection = document.querySelector('.subscriptions-section');
   const subscriptionsTitle = document.querySelector('[data-sidebar-title]');
-  const subscriptions = JSON.parse(localStorage.getItem('subscriptions')) ?? previews.map(preview => preview.channel.link);
+  const subscriptions = JSON.parse(localStorage.getItem('subscriptions')) ?? previews.map(preview => preview.channel.link).slice(0, 8);
 
   let showBtn = document.querySelector('[data-show]');
 

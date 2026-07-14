@@ -8,14 +8,14 @@
 
 *::-webkit-scrollbar-thumb {
   min-height: 40px;
-  background-color: rgb(180, 180, 180);
+  background-color: var(--scrollbar-thumb);
   border-radius: 999px;
   border: 2px solid transparent;
   background-clip: content-box;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(150, 150, 150);
+  background-color: var(--scrollbar-thumb-hover);
 }
 
 .hidden-scrollbar-thumb::-webkit-scrollbar-thumb {

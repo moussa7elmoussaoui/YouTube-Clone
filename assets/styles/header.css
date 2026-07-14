@@ -7,7 +7,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgb(222, 222, 222);
+  border-bottom: 1px solid var(--color-divider);
   z-index: 2;
 }
 
@@ -35,14 +35,18 @@ header {
   min-width: 0;
   width: 0;
   font-size: var(--font-lg);
-  background-color: var(--color-surface);
+  background-color: var(--color-input);
   padding-left: 12px;
-  border: 1px solid rgb(204, 204, 204);
+  border: 1px solid var(--color-search-border);
   border-radius: 20px 0 0 20px;
 
   &:focus-visible {
     outline: none;
     border: 1px solid var(--color-blue);
+  }
+
+  &::placeholder {
+    color: var(--color-secondary);
   }
 }
 
@@ -70,14 +74,14 @@ header {
 .search button:not(.voice-search) {
   height: 40px;
   width: 64px;
-  border: 1px solid rgb(204, 204, 204);
+  border: 1px solid var(--color-search-border);
   border-left: none;
-  background-color: rgb(247, 247, 247);
+  background-color: var(--color-search-button);
   cursor: pointer;
   margin-right: 8px;
 
   &:hover {
-    background-color: rgb(239, 239, 239);
+    background-color: var(--color-search-button-hover);
   }
 
   &::after {
@@ -92,7 +96,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(248, 248, 248);
+  background-color: var(--color-search-button);
   height: 40px;
   aspect-ratio: 1;
   border-radius: 20px;
